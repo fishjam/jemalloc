@@ -1,0 +1,1476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="bin">
+      <UniqueIdentifier>{b03df7da-0223-4108-bcc9-ea8c4a0e3095}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\jemalloc">
+      <UniqueIdentifier>{b5b1e96e-63a8-476f-a034-29381cc580da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{3646eedd-bb21-4639-9d6e-f4e0ddc738ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\jemalloc\internal">
+      <UniqueIdentifier>{c28b0c30-5d86-4129-8d7b-19beacb2af25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripts">
+      <UniqueIdentifier>{f4eb9ef7-8f74-4f08-bba1-f07f7152b54f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripts\freebsd">
+      <UniqueIdentifier>{45e96abe-e3f1-4d7b-a8ce-06f095814019}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripts\linux">
+      <UniqueIdentifier>{5de5f81c-9cf9-4b08-97b9-93d4536aa6c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripts\windows">
+      <UniqueIdentifier>{625320c2-1608-4cdf-b3d4-0079bb345b5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test">
+      <UniqueIdentifier>{6e996aae-5ba4-4da5-bf8d-b080223ddefc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\integration">
+      <UniqueIdentifier>{25912185-0825-438f-aa80-ec3274eb95f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\integration\cpp">
+      <UniqueIdentifier>{7800e455-a2f9-4f7e-b522-4cbc20a48cca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\unit">
+      <UniqueIdentifier>{37bcc5d5-c937-46dd-92f8-bc6dcd6f1a9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="doc_internal">
+      <UniqueIdentifier>{d6b831bb-fa64-4595-9589-9be7d2d3240d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="doc">
+      <UniqueIdentifier>{776051c0-de2d-4ac5-bbb0-fb491c17d150}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\msvc_compat">
+      <UniqueIdentifier>{0b75de2a-40f8-4ba3-84a6-6f34495be976}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\msvc_compat\C99">
+      <UniqueIdentifier>{33e93455-813d-4377-bdfa-2c125a6a3ccb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="msvc\test_threads">
+      <UniqueIdentifier>{952d4d40-53b2-4c38-b935-d5dd515f5c08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="msvc">
+      <UniqueIdentifier>{860cf6ae-1c80-4437-8ff6-58a0d50a1fec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\include\test">
+      <UniqueIdentifier>{6e2459ec-fc13-4cb3-9df2-5c5da77ebc11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\include">
+      <UniqueIdentifier>{127557ec-85d6-4705-9565-b12abde3f48a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{e1d5a98e-b7ca-4e9f-a820-9673e7e0cb97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\stress\cpp">
+      <UniqueIdentifier>{0f826e60-20ea-4ef0-beb2-741d9c371f03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\stress">
+      <UniqueIdentifier>{5acf63f0-aacc-4e0a-8411-e3fd27adb710}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\analyze">
+      <UniqueIdentifier>{1779510f-0cab-4c09-be06-ec007a4af667}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\src">
+      <UniqueIdentifier>{37dbb3ee-2251-45c9-9003-ce774504ee00}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".\autogen.sh" />
+    <None Include=".\run_tests.sh" />
+    <None Include="bin\jemalloc.sh">
+      <Filter>bin</Filter>
+    </None>
+    <None Include="include\jemalloc\jemalloc.sh">
+      <Filter>include\jemalloc</Filter>
+    </None>
+    <None Include="include\jemalloc\jemalloc_mangle.sh">
+      <Filter>include\jemalloc</Filter>
+    </None>
+    <None Include="include\jemalloc\jemalloc_rename.sh">
+      <Filter>include\jemalloc</Filter>
+    </None>
+    <None Include="include\jemalloc\internal\private_namespace.sh">
+      <Filter>include\jemalloc\internal</Filter>
+    </None>
+    <None Include="include\jemalloc\internal\private_symbols.sh">
+      <Filter>include\jemalloc\internal</Filter>
+    </None>
+    <None Include="include\jemalloc\internal\public_namespace.sh">
+      <Filter>include\jemalloc\internal</Filter>
+    </None>
+    <None Include="include\jemalloc\internal\public_unnamespace.sh">
+      <Filter>include\jemalloc\internal</Filter>
+    </None>
+    <None Include="include\jemalloc\internal\smoothstep.sh">
+      <Filter>include\jemalloc\internal</Filter>
+    </None>
+    <None Include="scripts\check-formatting.sh">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\check_trailing_whitespace.sh">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\run_static_analysis.sh">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\freebsd\before_install.sh">
+      <Filter>scripts\freebsd</Filter>
+    </None>
+    <None Include="scripts\freebsd\before_script.sh">
+      <Filter>scripts\freebsd</Filter>
+    </None>
+    <None Include="scripts\freebsd\script.sh">
+      <Filter>scripts\freebsd</Filter>
+    </None>
+    <None Include="scripts\linux\before_install.sh">
+      <Filter>scripts\linux</Filter>
+    </None>
+    <None Include="scripts\windows\before_install.sh">
+      <Filter>scripts\windows</Filter>
+    </None>
+    <None Include="scripts\windows\before_script.sh">
+      <Filter>scripts\windows</Filter>
+    </None>
+    <None Include="scripts\windows\script.sh">
+      <Filter>scripts\windows</Filter>
+    </None>
+    <None Include="test\test.sh">
+      <Filter>test</Filter>
+    </None>
+    <None Include="test\integration\extent.sh">
+      <Filter>test\integration</Filter>
+    </None>
+    <None Include="test\integration\mallocx.sh">
+      <Filter>test\integration</Filter>
+    </None>
+    <None Include="test\integration\slab_sizes.sh">
+      <Filter>test\integration</Filter>
+    </None>
+    <None Include="test\integration\smallocx.sh">
+      <Filter>test\integration</Filter>
+    </None>
+    <None Include="test\integration\xallocx.sh">
+      <Filter>test\integration</Filter>
+    </None>
+    <None Include="test\integration\cpp\infallible_new_false.sh">
+      <Filter>test\integration\cpp</Filter>
+    </None>
+    <None Include="test\integration\cpp\infallible_new_true.sh">
+      <Filter>test\integration\cpp</Filter>
+    </None>
+    <None Include="test\unit\arena_decay.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\arena_reset_prof.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\batch_alloc.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\batch_alloc_prof.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\binshard.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\bin_batching.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\hpa_background_thread.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\inspect.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\junk.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\junk_alloc.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\junk_free.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\malloc_conf_2.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\pack.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\prof_accum.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\prof_active.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\prof_gdump.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\prof_hook.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\prof_idump.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\prof_log.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\prof_mdump.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\prof_recent.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\prof_reset.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\prof_small.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\prof_stats.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\prof_sys_thread_name.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\prof_tctx.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\prof_thread_name.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\prof_threshold_small.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\safety_check.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\san.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\size_check.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\tcache_max.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\thread_event.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\zero.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\zero_reallocs.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\zero_realloc_abort.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\zero_realloc_alloc.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="test\unit\zero_realloc_free.sh">
+      <Filter>test\unit</Filter>
+    </None>
+    <None Include="scripts\gen_run_tests.py">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\gen_travis.py">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="src\ticker.py">
+      <Filter>src</Filter>
+    </None>
+    <None Include="Makefile" />
+    <None Include="Makefile.in" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include=".\INSTALL.md" />
+    <Text Include=".\TUNING.md" />
+    <Text Include="doc_internal\PROFILING_INTERNALS.md">
+      <Filter>doc_internal</Filter>
+    </Text>
+    <Text Include="include\jemalloc\internal\public_symbols.txt">
+      <Filter>include\jemalloc\internal</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <xml Include="doc\jemalloc.xml">
+      <Filter>doc</Filter>
+    </xml>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\jemalloc\jemalloc.h">
+      <Filter>include\jemalloc</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\jemalloc_defs.h">
+      <Filter>include\jemalloc</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\jemalloc_macros.h">
+      <Filter>include\jemalloc</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\jemalloc_mangle.h">
+      <Filter>include\jemalloc</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\jemalloc_mangle_jet.h">
+      <Filter>include\jemalloc</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\jemalloc_protos.h">
+      <Filter>include\jemalloc</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\jemalloc_protos_jet.h">
+      <Filter>include\jemalloc</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\jemalloc_rename.h">
+      <Filter>include\jemalloc</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\jemalloc_typedefs.h">
+      <Filter>include\jemalloc</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\activity_callback.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\arena_externs.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\arena_inlines_a.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\arena_inlines_b.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\arena_stats.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\arena_structs.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\arena_types.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\assert.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\atomic.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\atomic_c11.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\atomic_gcc_atomic.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\atomic_gcc_sync.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\atomic_msvc.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\background_thread_externs.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\background_thread_inlines.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\background_thread_structs.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\base.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\batcher.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\bin.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\bin_info.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\bin_stats.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\bin_types.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\bitmap.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\bit_util.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\buf_writer.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\cache_bin.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\ckh.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\counter.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\ctl.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\decay.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\div.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\ecache.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\edata.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\edata_cache.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\ehooks.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\emap.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\emitter.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\eset.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\exp_grow.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\extent.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\extent_dss.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\extent_mmap.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\fb.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\fxp.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\hash.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\hook.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\hpa.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\hpa_hooks.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\hpa_opts.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\hpdata.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\inspect.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\jemalloc_internal_decls.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\jemalloc_internal_defs.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\jemalloc_internal_externs.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\jemalloc_internal_includes.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\jemalloc_internal_inlines_a.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\jemalloc_internal_inlines_b.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\jemalloc_internal_inlines_c.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\jemalloc_internal_macros.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\jemalloc_internal_overrides.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\jemalloc_internal_types.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\jemalloc_preamble.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\large_externs.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\lockedint.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\log.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\malloc_io.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\mpsc_queue.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\mutex.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\mutex_prof.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\nstime.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\pa.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\pac.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\pages.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\pai.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\peak.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\peak_event.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\ph.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\private_namespace.gen.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\private_namespace.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\prng.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\prof_data.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\prof_externs.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\prof_hook.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\prof_inlines.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\prof_log.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\prof_recent.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\prof_stats.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\prof_structs.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\prof_sys.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\prof_threshold.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\prof_types.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\psset.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\public_namespace.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\public_unnamespace.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\ql.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\qr.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\quantum.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\rb.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\rtree.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\rtree_tsd.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\safety_check.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\san.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\san_bump.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\sc.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\sec.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\sec_opts.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\seq.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\slab_data.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\smoothstep.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\spin.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\stats.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\sz.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\tcache_externs.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\tcache_inlines.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\tcache_structs.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\tcache_types.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\test_hooks.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\thread_event.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\ticker.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\tsd.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\tsd_generic.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\tsd_internals.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\tsd_malloc_thread_cleanup.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\tsd_tls.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\tsd_types.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\tsd_win.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\typed_list.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\util.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jemalloc\internal\witness.h">
+      <Filter>include\jemalloc\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\msvc_compat\strings.h">
+      <Filter>include\msvc_compat</Filter>
+    </ClInclude>
+    <ClInclude Include="include\msvc_compat\windows_extra.h">
+      <Filter>include\msvc_compat</Filter>
+    </ClInclude>
+    <ClInclude Include="include\msvc_compat\C99\stdbool.h">
+      <Filter>include\msvc_compat\C99</Filter>
+    </ClInclude>
+    <ClInclude Include="include\msvc_compat\C99\stdint.h">
+      <Filter>include\msvc_compat\C99</Filter>
+    </ClInclude>
+    <ClInclude Include="msvc\test_threads\test_threads.h">
+      <Filter>msvc\test_threads</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\arena_util.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\bench.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\bgthd.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\btalloc.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\extent_hooks.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\fork.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\jemalloc_test.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\jemalloc_test_defs.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\math.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\mq.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\mtx.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\nbits.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\san.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\SFMT-alti.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\SFMT-params.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\SFMT-params11213.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\SFMT-params1279.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\SFMT-params132049.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\SFMT-params19937.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\SFMT-params216091.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\SFMT-params2281.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\SFMT-params4253.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\SFMT-params44497.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\SFMT-params607.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\SFMT-params86243.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\SFMT-sse2.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\SFMT.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\sleep.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\test.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\thd.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\include\test\timer.h">
+      <Filter>test\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\unit\double_free.h">
+      <Filter>test\unit</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="msvc\test_threads\test_threads.cpp">
+      <Filter>msvc\test_threads</Filter>
+    </ClCompile>
+    <ClCompile Include="msvc\test_threads\test_threads_main.cpp">
+      <Filter>msvc\test_threads</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jemalloc_cpp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="test\integration\cpp\basic.cpp">
+      <Filter>test\integration\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="test\integration\cpp\infallible_new_false.cpp">
+      <Filter>test\integration\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="test\integration\cpp\infallible_new_true.cpp">
+      <Filter>test\integration\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="test\stress\cpp\microbench.cpp">
+      <Filter>test\stress\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\arena.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\background_thread.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\batcher.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bin.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bin_info.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bitmap.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\buf_writer.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cache_bin.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ckh.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\counter.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ctl.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\decay.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\div.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ecache.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\edata.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\edata_cache.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ehooks.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emap.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\eset.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\exp_grow.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\extent.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\extent_dss.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\extent_mmap.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fxp.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hook.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hpa.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hpa_hooks.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hpdata.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\inspect.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jemalloc.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\large.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\malloc_io.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mutex.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nstime.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pa.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pa_extra.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pac.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pages.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pai.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\peak_event.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\prof.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\prof_data.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\prof_log.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\prof_recent.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\prof_stack_range.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\prof_stats.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\prof_sys.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\prof_threshold.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\psset.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rtree.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\safety_check.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\san.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\san_bump.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sc.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sec.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stats.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sz.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tcache.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\test_hooks.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\thread_event.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ticker.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tsd.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\util.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\witness.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zone.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jvmti.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="test\analyze\prof_bias.c">
+      <Filter>test\analyze</Filter>
+    </ClCompile>
+    <ClCompile Include="test\analyze\rand.c">
+      <Filter>test\analyze</Filter>
+    </ClCompile>
+    <ClCompile Include="test\analyze\sizes.c">
+      <Filter>test\analyze</Filter>
+    </ClCompile>
+    <ClCompile Include="test\integration\aligned_alloc.c">
+      <Filter>test\integration</Filter>
+    </ClCompile>
+    <ClCompile Include="test\integration\allocated.c">
+      <Filter>test\integration</Filter>
+    </ClCompile>
+    <ClCompile Include="test\integration\extent.c">
+      <Filter>test\integration</Filter>
+    </ClCompile>
+    <ClCompile Include="test\integration\malloc.c">
+      <Filter>test\integration</Filter>
+    </ClCompile>
+    <ClCompile Include="test\integration\mallocx.c">
+      <Filter>test\integration</Filter>
+    </ClCompile>
+    <ClCompile Include="test\integration\MALLOCX_ARENA.c">
+      <Filter>test\integration</Filter>
+    </ClCompile>
+    <ClCompile Include="test\integration\overflow.c">
+      <Filter>test\integration</Filter>
+    </ClCompile>
+    <ClCompile Include="test\integration\posix_memalign.c">
+      <Filter>test\integration</Filter>
+    </ClCompile>
+    <ClCompile Include="test\integration\rallocx.c">
+      <Filter>test\integration</Filter>
+    </ClCompile>
+    <ClCompile Include="test\integration\sdallocx.c">
+      <Filter>test\integration</Filter>
+    </ClCompile>
+    <ClCompile Include="test\integration\slab_sizes.c">
+      <Filter>test\integration</Filter>
+    </ClCompile>
+    <ClCompile Include="test\integration\smallocx.c">
+      <Filter>test\integration</Filter>
+    </ClCompile>
+    <ClCompile Include="test\integration\thread_arena.c">
+      <Filter>test\integration</Filter>
+    </ClCompile>
+    <ClCompile Include="test\integration\thread_tcache_enabled.c">
+      <Filter>test\integration</Filter>
+    </ClCompile>
+    <ClCompile Include="test\integration\xallocx.c">
+      <Filter>test\integration</Filter>
+    </ClCompile>
+    <ClCompile Include="test\src\btalloc.c">
+      <Filter>test\src</Filter>
+    </ClCompile>
+    <ClCompile Include="test\src\btalloc_0.c">
+      <Filter>test\src</Filter>
+    </ClCompile>
+    <ClCompile Include="test\src\btalloc_1.c">
+      <Filter>test\src</Filter>
+    </ClCompile>
+    <ClCompile Include="test\src\math.c">
+      <Filter>test\src</Filter>
+    </ClCompile>
+    <ClCompile Include="test\src\mtx.c">
+      <Filter>test\src</Filter>
+    </ClCompile>
+    <ClCompile Include="test\src\SFMT.c">
+      <Filter>test\src</Filter>
+    </ClCompile>
+    <ClCompile Include="test\src\sleep.c">
+      <Filter>test\src</Filter>
+    </ClCompile>
+    <ClCompile Include="test\src\test.c">
+      <Filter>test\src</Filter>
+    </ClCompile>
+    <ClCompile Include="test\src\thd.c">
+      <Filter>test\src</Filter>
+    </ClCompile>
+    <ClCompile Include="test\src\timer.c">
+      <Filter>test\src</Filter>
+    </ClCompile>
+    <ClCompile Include="test\stress\batch_alloc.c">
+      <Filter>test\stress</Filter>
+    </ClCompile>
+    <ClCompile Include="test\stress\fill_flush.c">
+      <Filter>test\stress</Filter>
+    </ClCompile>
+    <ClCompile Include="test\stress\hookbench.c">
+      <Filter>test\stress</Filter>
+    </ClCompile>
+    <ClCompile Include="test\stress\large_microbench.c">
+      <Filter>test\stress</Filter>
+    </ClCompile>
+    <ClCompile Include="test\stress\mallctl.c">
+      <Filter>test\stress</Filter>
+    </ClCompile>
+    <ClCompile Include="test\stress\microbench.c">
+      <Filter>test\stress</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\a0.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\arena_decay.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\arena_reset.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\arena_reset_prof.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\atomic.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\background_thread.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\background_thread_enable.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\base.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\batcher.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\batch_alloc.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\batch_alloc_prof.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\binshard.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\bin_batching.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\bitmap.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\bit_util.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\buf_writer.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\cache_bin.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\ckh.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\counter.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\decay.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\div.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\double_free.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\edata_cache.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\emitter.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\extent_quantize.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\fb.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\fork.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\fxp.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\hash.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\hook.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\hpa.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\hpa_background_thread.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\hpdata.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\huge.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\inspect.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\junk.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\junk_alloc.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\junk_free.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\log.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\mallctl.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\malloc_conf_2.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\malloc_io.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\math.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\mpsc_queue.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\mq.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\mtx.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\ncached_max.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\nstime.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\oversize_threshold.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\pa.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\pack.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\pages.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\peak.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\ph.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\prng.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\prof_accum.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\prof_active.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\prof_gdump.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\prof_hook.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\prof_idump.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\prof_log.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\prof_mdump.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\prof_recent.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\prof_reset.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\prof_small.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\prof_stats.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\prof_sys_thread_name.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\prof_tctx.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\prof_thread_name.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\prof_threshold.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\prof_threshold_small.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\psset.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\ql.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\qr.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\rb.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\retained.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\rtree.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\safety_check.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\san.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\san_bump.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\sc.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\sec.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\seq.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\SFMT.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\size_check.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\size_classes.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\slab.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\smoothstep.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\spin.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\stats.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\stats_print.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\sz.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\tcache_max.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\test_hooks.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\thread_event.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\ticker.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\tsd.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\uaf.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\witness.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\zero.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\zero_reallocs.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\zero_realloc_abort.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\zero_realloc_alloc.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="test\unit\zero_realloc_free.c">
+      <Filter>test\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jni_verify.c">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

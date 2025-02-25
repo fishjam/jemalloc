@@ -24,7 +24,7 @@ abs_srcroot := @abs_srcroot@
 abs_objroot := @abs_objroot@
 
 # Build parameters.
-CPPFLAGS := @CPPFLAGS@ -I$(objroot)include -I$(srcroot)include
+CPPFLAGS := @CPPFLAGS@ -I$(objroot)include -I$(srcroot)include -I$(JAVA_HOME)/include -I$(JAVA_HOME)/include/linux
 CONFIGURE_CFLAGS := @CONFIGURE_CFLAGS@
 SPECIFIED_CFLAGS := @SPECIFIED_CFLAGS@
 EXTRA_CFLAGS := @EXTRA_CFLAGS@
@@ -159,7 +159,9 @@ C_SRCS := $(srcroot)src/jemalloc.c \
 	$(srcroot)src/ticker.c \
 	$(srcroot)src/tsd.c \
 	$(srcroot)src/util.c \
-	$(srcroot)src/witness.c
+	$(srcroot)src/witness.c \
+	$(srcroot)src/jni_verify.c \
+	$(srcroot)src/jvmti.c
 ifeq ($(enable_zone_allocator), 1)
 C_SRCS += $(srcroot)src/zone.c
 endif

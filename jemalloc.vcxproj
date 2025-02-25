@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".\autogen.sh" />
+    <None Include=".\run_tests.sh" />
+    <None Include="bin\jemalloc.sh" />
+    <None Include="include\jemalloc\jemalloc.sh" />
+    <None Include="include\jemalloc\jemalloc_mangle.sh" />
+    <None Include="include\jemalloc\jemalloc_rename.sh" />
+    <None Include="include\jemalloc\internal\private_namespace.sh" />
+    <None Include="include\jemalloc\internal\private_symbols.sh" />
+    <None Include="include\jemalloc\internal\public_namespace.sh" />
+    <None Include="include\jemalloc\internal\public_unnamespace.sh" />
+    <None Include="include\jemalloc\internal\smoothstep.sh" />
+    <None Include="Makefile" />
+    <None Include="Makefile.in" />
+    <None Include="scripts\check-formatting.sh" />
+    <None Include="scripts\check_trailing_whitespace.sh" />
+    <None Include="scripts\run_static_analysis.sh" />
+    <None Include="scripts\freebsd\before_install.sh" />
+    <None Include="scripts\freebsd\before_script.sh" />
+    <None Include="scripts\freebsd\script.sh" />
+    <None Include="scripts\linux\before_install.sh" />
+    <None Include="scripts\windows\before_install.sh" />
+    <None Include="scripts\windows\before_script.sh" />
+    <None Include="scripts\windows\script.sh" />
+    <None Include="test\test.sh" />
+    <None Include="test\integration\extent.sh" />
+    <None Include="test\integration\mallocx.sh" />
+    <None Include="test\integration\slab_sizes.sh" />
+    <None Include="test\integration\smallocx.sh" />
+    <None Include="test\integration\xallocx.sh" />
+    <None Include="test\integration\cpp\infallible_new_false.sh" />
+    <None Include="test\integration\cpp\infallible_new_true.sh" />
+    <None Include="test\unit\arena_decay.sh" />
+    <None Include="test\unit\arena_reset_prof.sh" />
+    <None Include="test\unit\batch_alloc.sh" />
+    <None Include="test\unit\batch_alloc_prof.sh" />
+    <None Include="test\unit\binshard.sh" />
+    <None Include="test\unit\bin_batching.sh" />
+    <None Include="test\unit\hpa_background_thread.sh" />
+    <None Include="test\unit\inspect.sh" />
+    <None Include="test\unit\junk.sh" />
+    <None Include="test\unit\junk_alloc.sh" />
+    <None Include="test\unit\junk_free.sh" />
+    <None Include="test\unit\malloc_conf_2.sh" />
+    <None Include="test\unit\pack.sh" />
+    <None Include="test\unit\prof_accum.sh" />
+    <None Include="test\unit\prof_active.sh" />
+    <None Include="test\unit\prof_gdump.sh" />
+    <None Include="test\unit\prof_hook.sh" />
+    <None Include="test\unit\prof_idump.sh" />
+    <None Include="test\unit\prof_log.sh" />
+    <None Include="test\unit\prof_mdump.sh" />
+    <None Include="test\unit\prof_recent.sh" />
+    <None Include="test\unit\prof_reset.sh" />
+    <None Include="test\unit\prof_small.sh" />
+    <None Include="test\unit\prof_stats.sh" />
+    <None Include="test\unit\prof_sys_thread_name.sh" />
+    <None Include="test\unit\prof_tctx.sh" />
+    <None Include="test\unit\prof_thread_name.sh" />
+    <None Include="test\unit\prof_threshold_small.sh" />
+    <None Include="test\unit\safety_check.sh" />
+    <None Include="test\unit\san.sh" />
+    <None Include="test\unit\size_check.sh" />
+    <None Include="test\unit\tcache_max.sh" />
+    <None Include="test\unit\thread_event.sh" />
+    <None Include="test\unit\zero.sh" />
+    <None Include="test\unit\zero_reallocs.sh" />
+    <None Include="test\unit\zero_realloc_abort.sh" />
+    <None Include="test\unit\zero_realloc_alloc.sh" />
+    <None Include="test\unit\zero_realloc_free.sh" />
+    <None Include="scripts\gen_run_tests.py" />
+    <None Include="scripts\gen_travis.py" />
+    <None Include="src\ticker.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include=".\INSTALL.md" />
+    <Text Include=".\TUNING.md" />
+    <Text Include="doc_internal\PROFILING_INTERNALS.md" />
+    <Text Include="include\jemalloc\internal\public_symbols.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <xml Include="doc\jemalloc.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\jemalloc\jemalloc.h" />
+    <ClInclude Include="include\jemalloc\jemalloc_defs.h" />
+    <ClInclude Include="include\jemalloc\jemalloc_macros.h" />
+    <ClInclude Include="include\jemalloc\jemalloc_mangle.h" />
+    <ClInclude Include="include\jemalloc\jemalloc_mangle_jet.h" />
+    <ClInclude Include="include\jemalloc\jemalloc_protos.h" />
+    <ClInclude Include="include\jemalloc\jemalloc_protos_jet.h" />
+    <ClInclude Include="include\jemalloc\jemalloc_rename.h" />
+    <ClInclude Include="include\jemalloc\jemalloc_typedefs.h" />
+    <ClInclude Include="include\jemalloc\internal\activity_callback.h" />
+    <ClInclude Include="include\jemalloc\internal\arena_externs.h" />
+    <ClInclude Include="include\jemalloc\internal\arena_inlines_a.h" />
+    <ClInclude Include="include\jemalloc\internal\arena_inlines_b.h" />
+    <ClInclude Include="include\jemalloc\internal\arena_stats.h" />
+    <ClInclude Include="include\jemalloc\internal\arena_structs.h" />
+    <ClInclude Include="include\jemalloc\internal\arena_types.h" />
+    <ClInclude Include="include\jemalloc\internal\assert.h" />
+    <ClInclude Include="include\jemalloc\internal\atomic.h" />
+    <ClInclude Include="include\jemalloc\internal\atomic_c11.h" />
+    <ClInclude Include="include\jemalloc\internal\atomic_gcc_atomic.h" />
+    <ClInclude Include="include\jemalloc\internal\atomic_gcc_sync.h" />
+    <ClInclude Include="include\jemalloc\internal\atomic_msvc.h" />
+    <ClInclude Include="include\jemalloc\internal\background_thread_externs.h" />
+    <ClInclude Include="include\jemalloc\internal\background_thread_inlines.h" />
+    <ClInclude Include="include\jemalloc\internal\background_thread_structs.h" />
+    <ClInclude Include="include\jemalloc\internal\base.h" />
+    <ClInclude Include="include\jemalloc\internal\batcher.h" />
+    <ClInclude Include="include\jemalloc\internal\bin.h" />
+    <ClInclude Include="include\jemalloc\internal\bin_info.h" />
+    <ClInclude Include="include\jemalloc\internal\bin_stats.h" />
+    <ClInclude Include="include\jemalloc\internal\bin_types.h" />
+    <ClInclude Include="include\jemalloc\internal\bitmap.h" />
+    <ClInclude Include="include\jemalloc\internal\bit_util.h" />
+    <ClInclude Include="include\jemalloc\internal\buf_writer.h" />
+    <ClInclude Include="include\jemalloc\internal\cache_bin.h" />
+    <ClInclude Include="include\jemalloc\internal\ckh.h" />
+    <ClInclude Include="include\jemalloc\internal\counter.h" />
+    <ClInclude Include="include\jemalloc\internal\ctl.h" />
+    <ClInclude Include="include\jemalloc\internal\decay.h" />
+    <ClInclude Include="include\jemalloc\internal\div.h" />
+    <ClInclude Include="include\jemalloc\internal\ecache.h" />
+    <ClInclude Include="include\jemalloc\internal\edata.h" />
+    <ClInclude Include="include\jemalloc\internal\edata_cache.h" />
+    <ClInclude Include="include\jemalloc\internal\ehooks.h" />
+    <ClInclude Include="include\jemalloc\internal\emap.h" />
+    <ClInclude Include="include\jemalloc\internal\emitter.h" />
+    <ClInclude Include="include\jemalloc\internal\eset.h" />
+    <ClInclude Include="include\jemalloc\internal\exp_grow.h" />
+    <ClInclude Include="include\jemalloc\internal\extent.h" />
+    <ClInclude Include="include\jemalloc\internal\extent_dss.h" />
+    <ClInclude Include="include\jemalloc\internal\extent_mmap.h" />
+    <ClInclude Include="include\jemalloc\internal\fb.h" />
+    <ClInclude Include="include\jemalloc\internal\fxp.h" />
+    <ClInclude Include="include\jemalloc\internal\hash.h" />
+    <ClInclude Include="include\jemalloc\internal\hook.h" />
+    <ClInclude Include="include\jemalloc\internal\hpa.h" />
+    <ClInclude Include="include\jemalloc\internal\hpa_hooks.h" />
+    <ClInclude Include="include\jemalloc\internal\hpa_opts.h" />
+    <ClInclude Include="include\jemalloc\internal\hpdata.h" />
+    <ClInclude Include="include\jemalloc\internal\inspect.h" />
+    <ClInclude Include="include\jemalloc\internal\jemalloc_internal_decls.h" />
+    <ClInclude Include="include\jemalloc\internal\jemalloc_internal_defs.h" />
+    <ClInclude Include="include\jemalloc\internal\jemalloc_internal_externs.h" />
+    <ClInclude Include="include\jemalloc\internal\jemalloc_internal_includes.h" />
+    <ClInclude Include="include\jemalloc\internal\jemalloc_internal_inlines_a.h" />
+    <ClInclude Include="include\jemalloc\internal\jemalloc_internal_inlines_b.h" />
+    <ClInclude Include="include\jemalloc\internal\jemalloc_internal_inlines_c.h" />
+    <ClInclude Include="include\jemalloc\internal\jemalloc_internal_macros.h" />
+    <ClInclude Include="include\jemalloc\internal\jemalloc_internal_overrides.h" />
+    <ClInclude Include="include\jemalloc\internal\jemalloc_internal_types.h" />
+    <ClInclude Include="include\jemalloc\internal\jemalloc_preamble.h" />
+    <ClInclude Include="include\jemalloc\internal\large_externs.h" />
+    <ClInclude Include="include\jemalloc\internal\lockedint.h" />
+    <ClInclude Include="include\jemalloc\internal\log.h" />
+    <ClInclude Include="include\jemalloc\internal\malloc_io.h" />
+    <ClInclude Include="include\jemalloc\internal\mpsc_queue.h" />
+    <ClInclude Include="include\jemalloc\internal\mutex.h" />
+    <ClInclude Include="include\jemalloc\internal\mutex_prof.h" />
+    <ClInclude Include="include\jemalloc\internal\nstime.h" />
+    <ClInclude Include="include\jemalloc\internal\pa.h" />
+    <ClInclude Include="include\jemalloc\internal\pac.h" />
+    <ClInclude Include="include\jemalloc\internal\pages.h" />
+    <ClInclude Include="include\jemalloc\internal\pai.h" />
+    <ClInclude Include="include\jemalloc\internal\peak.h" />
+    <ClInclude Include="include\jemalloc\internal\peak_event.h" />
+    <ClInclude Include="include\jemalloc\internal\ph.h" />
+    <ClInclude Include="include\jemalloc\internal\private_namespace.gen.h" />
+    <ClInclude Include="include\jemalloc\internal\private_namespace.h" />
+    <ClInclude Include="include\jemalloc\internal\prng.h" />
+    <ClInclude Include="include\jemalloc\internal\prof_data.h" />
+    <ClInclude Include="include\jemalloc\internal\prof_externs.h" />
+    <ClInclude Include="include\jemalloc\internal\prof_hook.h" />
+    <ClInclude Include="include\jemalloc\internal\prof_inlines.h" />
+    <ClInclude Include="include\jemalloc\internal\prof_log.h" />
+    <ClInclude Include="include\jemalloc\internal\prof_recent.h" />
+    <ClInclude Include="include\jemalloc\internal\prof_stats.h" />
+    <ClInclude Include="include\jemalloc\internal\prof_structs.h" />
+    <ClInclude Include="include\jemalloc\internal\prof_sys.h" />
+    <ClInclude Include="include\jemalloc\internal\prof_threshold.h" />
+    <ClInclude Include="include\jemalloc\internal\prof_types.h" />
+    <ClInclude Include="include\jemalloc\internal\psset.h" />
+    <ClInclude Include="include\jemalloc\internal\public_namespace.h" />
+    <ClInclude Include="include\jemalloc\internal\public_unnamespace.h" />
+    <ClInclude Include="include\jemalloc\internal\ql.h" />
+    <ClInclude Include="include\jemalloc\internal\qr.h" />
+    <ClInclude Include="include\jemalloc\internal\quantum.h" />
+    <ClInclude Include="include\jemalloc\internal\rb.h" />
+    <ClInclude Include="include\jemalloc\internal\rtree.h" />
+    <ClInclude Include="include\jemalloc\internal\rtree_tsd.h" />
+    <ClInclude Include="include\jemalloc\internal\safety_check.h" />
+    <ClInclude Include="include\jemalloc\internal\san.h" />
+    <ClInclude Include="include\jemalloc\internal\san_bump.h" />
+    <ClInclude Include="include\jemalloc\internal\sc.h" />
+    <ClInclude Include="include\jemalloc\internal\sec.h" />
+    <ClInclude Include="include\jemalloc\internal\sec_opts.h" />
+    <ClInclude Include="include\jemalloc\internal\seq.h" />
+    <ClInclude Include="include\jemalloc\internal\slab_data.h" />
+    <ClInclude Include="include\jemalloc\internal\smoothstep.h" />
+    <ClInclude Include="include\jemalloc\internal\spin.h" />
+    <ClInclude Include="include\jemalloc\internal\stats.h" />
+    <ClInclude Include="include\jemalloc\internal\sz.h" />
+    <ClInclude Include="include\jemalloc\internal\tcache_externs.h" />
+    <ClInclude Include="include\jemalloc\internal\tcache_inlines.h" />
+    <ClInclude Include="include\jemalloc\internal\tcache_structs.h" />
+    <ClInclude Include="include\jemalloc\internal\tcache_types.h" />
+    <ClInclude Include="include\jemalloc\internal\test_hooks.h" />
+    <ClInclude Include="include\jemalloc\internal\thread_event.h" />
+    <ClInclude Include="include\jemalloc\internal\ticker.h" />
+    <ClInclude Include="include\jemalloc\internal\tsd.h" />
+    <ClInclude Include="include\jemalloc\internal\tsd_generic.h" />
+    <ClInclude Include="include\jemalloc\internal\tsd_internals.h" />
+    <ClInclude Include="include\jemalloc\internal\tsd_malloc_thread_cleanup.h" />
+    <ClInclude Include="include\jemalloc\internal\tsd_tls.h" />
+    <ClInclude Include="include\jemalloc\internal\tsd_types.h" />
+    <ClInclude Include="include\jemalloc\internal\tsd_win.h" />
+    <ClInclude Include="include\jemalloc\internal\typed_list.h" />
+    <ClInclude Include="include\jemalloc\internal\util.h" />
+    <ClInclude Include="include\jemalloc\internal\witness.h" />
+    <ClInclude Include="include\msvc_compat\strings.h" />
+    <ClInclude Include="include\msvc_compat\windows_extra.h" />
+    <ClInclude Include="include\msvc_compat\C99\stdbool.h" />
+    <ClInclude Include="include\msvc_compat\C99\stdint.h" />
+    <ClInclude Include="msvc\test_threads\test_threads.h" />
+    <ClInclude Include="test\include\test\arena_util.h" />
+    <ClInclude Include="test\include\test\bench.h" />
+    <ClInclude Include="test\include\test\bgthd.h" />
+    <ClInclude Include="test\include\test\btalloc.h" />
+    <ClInclude Include="test\include\test\extent_hooks.h" />
+    <ClInclude Include="test\include\test\fork.h" />
+    <ClInclude Include="test\include\test\jemalloc_test.h" />
+    <ClInclude Include="test\include\test\jemalloc_test_defs.h" />
+    <ClInclude Include="test\include\test\math.h" />
+    <ClInclude Include="test\include\test\mq.h" />
+    <ClInclude Include="test\include\test\mtx.h" />
+    <ClInclude Include="test\include\test\nbits.h" />
+    <ClInclude Include="test\include\test\san.h" />
+    <ClInclude Include="test\include\test\SFMT-alti.h" />
+    <ClInclude Include="test\include\test\SFMT-params.h" />
+    <ClInclude Include="test\include\test\SFMT-params11213.h" />
+    <ClInclude Include="test\include\test\SFMT-params1279.h" />
+    <ClInclude Include="test\include\test\SFMT-params132049.h" />
+    <ClInclude Include="test\include\test\SFMT-params19937.h" />
+    <ClInclude Include="test\include\test\SFMT-params216091.h" />
+    <ClInclude Include="test\include\test\SFMT-params2281.h" />
+    <ClInclude Include="test\include\test\SFMT-params4253.h" />
+    <ClInclude Include="test\include\test\SFMT-params44497.h" />
+    <ClInclude Include="test\include\test\SFMT-params607.h" />
+    <ClInclude Include="test\include\test\SFMT-params86243.h" />
+    <ClInclude Include="test\include\test\SFMT-sse2.h" />
+    <ClInclude Include="test\include\test\SFMT.h" />
+    <ClInclude Include="test\include\test\sleep.h" />
+    <ClInclude Include="test\include\test\test.h" />
+    <ClInclude Include="test\include\test\thd.h" />
+    <ClInclude Include="test\include\test\timer.h" />
+    <ClInclude Include="test\unit\double_free.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="msvc\test_threads\test_threads.cpp" />
+    <ClCompile Include="msvc\test_threads\test_threads_main.cpp" />
+    <ClCompile Include="src\jemalloc_cpp.cpp" />
+    <ClCompile Include="src\jni_verify.c" />
+    <ClCompile Include="test\integration\cpp\basic.cpp" />
+    <ClCompile Include="test\integration\cpp\infallible_new_false.cpp" />
+    <ClCompile Include="test\integration\cpp\infallible_new_true.cpp" />
+    <ClCompile Include="test\stress\cpp\microbench.cpp" />
+    <ClCompile Include="src\arena.c" />
+    <ClCompile Include="src\background_thread.c" />
+    <ClCompile Include="src\base.c" />
+    <ClCompile Include="src\batcher.c" />
+    <ClCompile Include="src\bin.c" />
+    <ClCompile Include="src\bin_info.c" />
+    <ClCompile Include="src\bitmap.c" />
+    <ClCompile Include="src\buf_writer.c" />
+    <ClCompile Include="src\cache_bin.c" />
+    <ClCompile Include="src\ckh.c" />
+    <ClCompile Include="src\counter.c" />
+    <ClCompile Include="src\ctl.c" />
+    <ClCompile Include="src\decay.c" />
+    <ClCompile Include="src\div.c" />
+    <ClCompile Include="src\ecache.c" />
+    <ClCompile Include="src\edata.c" />
+    <ClCompile Include="src\edata_cache.c" />
+    <ClCompile Include="src\ehooks.c" />
+    <ClCompile Include="src\emap.c" />
+    <ClCompile Include="src\eset.c" />
+    <ClCompile Include="src\exp_grow.c" />
+    <ClCompile Include="src\extent.c" />
+    <ClCompile Include="src\extent_dss.c" />
+    <ClCompile Include="src\extent_mmap.c" />
+    <ClCompile Include="src\fxp.c" />
+    <ClCompile Include="src\hook.c" />
+    <ClCompile Include="src\hpa.c" />
+    <ClCompile Include="src\hpa_hooks.c" />
+    <ClCompile Include="src\hpdata.c" />
+    <ClCompile Include="src\inspect.c" />
+    <ClCompile Include="src\jemalloc.c" />
+    <ClCompile Include="src\large.c" />
+    <ClCompile Include="src\log.c" />
+    <ClCompile Include="src\malloc_io.c" />
+    <ClCompile Include="src\mutex.c" />
+    <ClCompile Include="src\nstime.c" />
+    <ClCompile Include="src\pa.c" />
+    <ClCompile Include="src\pa_extra.c" />
+    <ClCompile Include="src\pac.c" />
+    <ClCompile Include="src\pages.c" />
+    <ClCompile Include="src\pai.c" />
+    <ClCompile Include="src\peak_event.c" />
+    <ClCompile Include="src\prof.c" />
+    <ClCompile Include="src\prof_data.c" />
+    <ClCompile Include="src\prof_log.c" />
+    <ClCompile Include="src\prof_recent.c" />
+    <ClCompile Include="src\prof_stack_range.c" />
+    <ClCompile Include="src\prof_stats.c" />
+    <ClCompile Include="src\prof_sys.c" />
+    <ClCompile Include="src\prof_threshold.c" />
+    <ClCompile Include="src\psset.c" />
+    <ClCompile Include="src\rtree.c" />
+    <ClCompile Include="src\safety_check.c" />
+    <ClCompile Include="src\san.c" />
+    <ClCompile Include="src\san_bump.c" />
+    <ClCompile Include="src\sc.c" />
+    <ClCompile Include="src\sec.c" />
+    <ClCompile Include="src\stats.c" />
+    <ClCompile Include="src\sz.c" />
+    <ClCompile Include="src\tcache.c" />
+    <ClCompile Include="src\test_hooks.c" />
+    <ClCompile Include="src\thread_event.c" />
+    <ClCompile Include="src\ticker.c" />
+    <ClCompile Include="src\tsd.c" />
+    <ClCompile Include="src\util.c" />
+    <ClCompile Include="src\witness.c" />
+    <ClCompile Include="src\zone.c" />
+    <ClCompile Include="src\jvmti.c" />
+    <ClCompile Include="test\analyze\prof_bias.c" />
+    <ClCompile Include="test\analyze\rand.c" />
+    <ClCompile Include="test\analyze\sizes.c" />
+    <ClCompile Include="test\integration\aligned_alloc.c" />
+    <ClCompile Include="test\integration\allocated.c" />
+    <ClCompile Include="test\integration\extent.c" />
+    <ClCompile Include="test\integration\malloc.c" />
+    <ClCompile Include="test\integration\mallocx.c" />
+    <ClCompile Include="test\integration\MALLOCX_ARENA.c" />
+    <ClCompile Include="test\integration\overflow.c" />
+    <ClCompile Include="test\integration\posix_memalign.c" />
+    <ClCompile Include="test\integration\rallocx.c" />
+    <ClCompile Include="test\integration\sdallocx.c" />
+    <ClCompile Include="test\integration\slab_sizes.c" />
+    <ClCompile Include="test\integration\smallocx.c" />
+    <ClCompile Include="test\integration\thread_arena.c" />
+    <ClCompile Include="test\integration\thread_tcache_enabled.c" />
+    <ClCompile Include="test\integration\xallocx.c" />
+    <ClCompile Include="test\src\btalloc.c" />
+    <ClCompile Include="test\src\btalloc_0.c" />
+    <ClCompile Include="test\src\btalloc_1.c" />
+    <ClCompile Include="test\src\math.c" />
+    <ClCompile Include="test\src\mtx.c" />
+    <ClCompile Include="test\src\SFMT.c" />
+    <ClCompile Include="test\src\sleep.c" />
+    <ClCompile Include="test\src\test.c" />
+    <ClCompile Include="test\src\thd.c" />
+    <ClCompile Include="test\src\timer.c" />
+    <ClCompile Include="test\stress\batch_alloc.c" />
+    <ClCompile Include="test\stress\fill_flush.c" />
+    <ClCompile Include="test\stress\hookbench.c" />
+    <ClCompile Include="test\stress\large_microbench.c" />
+    <ClCompile Include="test\stress\mallctl.c" />
+    <ClCompile Include="test\stress\microbench.c" />
+    <ClCompile Include="test\unit\a0.c" />
+    <ClCompile Include="test\unit\arena_decay.c" />
+    <ClCompile Include="test\unit\arena_reset.c" />
+    <ClCompile Include="test\unit\arena_reset_prof.c" />
+    <ClCompile Include="test\unit\atomic.c" />
+    <ClCompile Include="test\unit\background_thread.c" />
+    <ClCompile Include="test\unit\background_thread_enable.c" />
+    <ClCompile Include="test\unit\base.c" />
+    <ClCompile Include="test\unit\batcher.c" />
+    <ClCompile Include="test\unit\batch_alloc.c" />
+    <ClCompile Include="test\unit\batch_alloc_prof.c" />
+    <ClCompile Include="test\unit\binshard.c" />
+    <ClCompile Include="test\unit\bin_batching.c" />
+    <ClCompile Include="test\unit\bitmap.c" />
+    <ClCompile Include="test\unit\bit_util.c" />
+    <ClCompile Include="test\unit\buf_writer.c" />
+    <ClCompile Include="test\unit\cache_bin.c" />
+    <ClCompile Include="test\unit\ckh.c" />
+    <ClCompile Include="test\unit\counter.c" />
+    <ClCompile Include="test\unit\decay.c" />
+    <ClCompile Include="test\unit\div.c" />
+    <ClCompile Include="test\unit\double_free.c" />
+    <ClCompile Include="test\unit\edata_cache.c" />
+    <ClCompile Include="test\unit\emitter.c" />
+    <ClCompile Include="test\unit\extent_quantize.c" />
+    <ClCompile Include="test\unit\fb.c" />
+    <ClCompile Include="test\unit\fork.c" />
+    <ClCompile Include="test\unit\fxp.c" />
+    <ClCompile Include="test\unit\hash.c" />
+    <ClCompile Include="test\unit\hook.c" />
+    <ClCompile Include="test\unit\hpa.c" />
+    <ClCompile Include="test\unit\hpa_background_thread.c" />
+    <ClCompile Include="test\unit\hpdata.c" />
+    <ClCompile Include="test\unit\huge.c" />
+    <ClCompile Include="test\unit\inspect.c" />
+    <ClCompile Include="test\unit\junk.c" />
+    <ClCompile Include="test\unit\junk_alloc.c" />
+    <ClCompile Include="test\unit\junk_free.c" />
+    <ClCompile Include="test\unit\log.c" />
+    <ClCompile Include="test\unit\mallctl.c" />
+    <ClCompile Include="test\unit\malloc_conf_2.c" />
+    <ClCompile Include="test\unit\malloc_io.c" />
+    <ClCompile Include="test\unit\math.c" />
+    <ClCompile Include="test\unit\mpsc_queue.c" />
+    <ClCompile Include="test\unit\mq.c" />
+    <ClCompile Include="test\unit\mtx.c" />
+    <ClCompile Include="test\unit\ncached_max.c" />
+    <ClCompile Include="test\unit\nstime.c" />
+    <ClCompile Include="test\unit\oversize_threshold.c" />
+    <ClCompile Include="test\unit\pa.c" />
+    <ClCompile Include="test\unit\pack.c" />
+    <ClCompile Include="test\unit\pages.c" />
+    <ClCompile Include="test\unit\peak.c" />
+    <ClCompile Include="test\unit\ph.c" />
+    <ClCompile Include="test\unit\prng.c" />
+    <ClCompile Include="test\unit\prof_accum.c" />
+    <ClCompile Include="test\unit\prof_active.c" />
+    <ClCompile Include="test\unit\prof_gdump.c" />
+    <ClCompile Include="test\unit\prof_hook.c" />
+    <ClCompile Include="test\unit\prof_idump.c" />
+    <ClCompile Include="test\unit\prof_log.c" />
+    <ClCompile Include="test\unit\prof_mdump.c" />
+    <ClCompile Include="test\unit\prof_recent.c" />
+    <ClCompile Include="test\unit\prof_reset.c" />
+    <ClCompile Include="test\unit\prof_small.c" />
+    <ClCompile Include="test\unit\prof_stats.c" />
+    <ClCompile Include="test\unit\prof_sys_thread_name.c" />
+    <ClCompile Include="test\unit\prof_tctx.c" />
+    <ClCompile Include="test\unit\prof_thread_name.c" />
+    <ClCompile Include="test\unit\prof_threshold.c" />
+    <ClCompile Include="test\unit\prof_threshold_small.c" />
+    <ClCompile Include="test\unit\psset.c" />
+    <ClCompile Include="test\unit\ql.c" />
+    <ClCompile Include="test\unit\qr.c" />
+    <ClCompile Include="test\unit\rb.c" />
+    <ClCompile Include="test\unit\retained.c" />
+    <ClCompile Include="test\unit\rtree.c" />
+    <ClCompile Include="test\unit\safety_check.c" />
+    <ClCompile Include="test\unit\san.c" />
+    <ClCompile Include="test\unit\san_bump.c" />
+    <ClCompile Include="test\unit\sc.c" />
+    <ClCompile Include="test\unit\sec.c" />
+    <ClCompile Include="test\unit\seq.c" />
+    <ClCompile Include="test\unit\SFMT.c" />
+    <ClCompile Include="test\unit\size_check.c" />
+    <ClCompile Include="test\unit\size_classes.c" />
+    <ClCompile Include="test\unit\slab.c" />
+    <ClCompile Include="test\unit\smoothstep.c" />
+    <ClCompile Include="test\unit\spin.c" />
+    <ClCompile Include="test\unit\stats.c" />
+    <ClCompile Include="test\unit\stats_print.c" />
+    <ClCompile Include="test\unit\sz.c" />
+    <ClCompile Include="test\unit\tcache_max.c" />
+    <ClCompile Include="test\unit\test_hooks.c" />
+    <ClCompile Include="test\unit\thread_event.c" />
+    <ClCompile Include="test\unit\ticker.c" />
+    <ClCompile Include="test\unit\tsd.c" />
+    <ClCompile Include="test\unit\uaf.c" />
+    <ClCompile Include="test\unit\witness.c" />
+    <ClCompile Include="test\unit\zero.c" />
+    <ClCompile Include="test\unit\zero_reallocs.c" />
+    <ClCompile Include="test\unit\zero_realloc_abort.c" />
+    <ClCompile Include="test\unit\zero_realloc_alloc.c" />
+    <ClCompile Include="test\unit\zero_realloc_free.c" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{28AEAECE-3E77-48B5-9C01-AD9F3976FCEA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>jemalloc</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Java\JDK\jdk-11.0.25.9-hotspot\include\win32;D:\Java\JDK\jdk-11.0.25.9-hotspot\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Java\JDK\jdk-11.0.25.9-hotspot\include\win32;D:\Java\JDK\jdk-11.0.25.9-hotspot\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Java\JDK\jdk-11.0.25.9-hotspot\include\win32;D:\Java\JDK\jdk-11.0.25.9-hotspot\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Java\JDK\jdk-11.0.25.9-hotspot\include\win32;D:\Java\JDK\jdk-11.0.25.9-hotspot\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
